@@ -1,5 +1,7 @@
+"use client"
+
 import useFileUpload from '@/lib/hooks/useFileUpload';
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 type DropBoxProps = {
   title: string;
