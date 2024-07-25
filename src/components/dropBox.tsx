@@ -6,7 +6,7 @@ type DropBoxProps = {
   additional?: string;
   optional?: boolean;
   acceptedFiles: { [key: string]: string[] }
-  setPreview: (preview: string | null) => void;
+  setPreview: (preview: File | null) => void;
 };
 
 const DropBox = (props: DropBoxProps) => {
@@ -31,7 +31,7 @@ const DropBox = (props: DropBoxProps) => {
 
   useEffect(() => {
     if (file) {
-      setPreview(preview);
+      setPreview(file);
     }
   }, [file, preview, setPreview]);
 
